@@ -1,0 +1,48 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 33,
+    "margin": 5,
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["bluetooth", "clock", "network"],
+    "modules-right": ["tray", "backlight", "pulseaudio", "battery"],
+    
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5]
+        },
+        "format": "{name}"
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "format-empty": ""
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "Brightness {percent}%"
+    },
+    "bluetooth": {
+        "format": "Bluetooth {status}",
+        "format-disabled": "Bluetooth OFF",
+        "format-connected": "Bluetooth {device_alias}",
+        "tooltip-format": "{device_address}"
+    },
+    "clock": {
+        "timezone": "Asia/Bangkok",
+        "format": "{:%H:%M  %A, %d %B}"
+    },
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "  Ethernet",
+        "format-disconnected": "⚠  No WiFi"
+    },
+    "battery": {
+        "format": "BAT {capacity}%",
+        "format-charging": "BAT-C {capacity}%"
+    },
+    "pulseaudio": {
+        "format": "Volume {volume}% {icon}",
+        "format-muted": "Volume Muted",
+        "format-icons": ["", "", ""]
+    }
+}
